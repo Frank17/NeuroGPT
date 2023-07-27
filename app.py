@@ -10,12 +10,12 @@ focus_san = """
 <style>
     @font-face {
         font-family: "Focussans Regular";
-        src: url("Graphik-Regular.woff2") format("woff2");
+        src: url("fonts/Graphik-Regular.woff2") format("woff2");
     }
-
+    
     html, body, [class*="css"]  {
-		font-family: "Focussans Regular";
-	}
+    	font-family: "Focussans Regular";
+     }
 </style>"""
 st.markdown(focus_san, unsafe_allow_html=True)
 
