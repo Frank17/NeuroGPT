@@ -10,7 +10,7 @@ focus_san = """
 <style>
     @font-face {
         font-family: "Focussans Regular";
-        src: url("../fonts/Graphik-Semibold.woff2") format("woff2");
+        src: url("Graphik-Regular.woff2") format("woff2");
     }
 
     html, body, [class*="css"]  {
