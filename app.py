@@ -4,19 +4,12 @@ import openai
 import os
 from typing import Iterator
 
+openai.api_key = os.getenv('OPENAI_API_KEY')
+
 st.title('NeuroGPT')
 
-focus_san = """
-<style>
-    @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap")
-
-    html, body, [class*="css"]  {
-		font-family: "Open Sans";
-	}
-</style>"""
-st.markdown(focus_san, unsafe_allow_html=True)
-
-openai.api_key = os.getenv('OPENAI_API_KEY')
+with open('style.css') as f:
+    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 if 'history' not in st.session_state:
     st.session_state['history'] = []
