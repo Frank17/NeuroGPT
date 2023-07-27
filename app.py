@@ -8,14 +8,11 @@ st.title('NeuroGPT')
 
 focus_san = """
 <style>
-    @font-face {
-        font-family: "Focussans Regular";
-        src: url("fonts/Graphik-Regular.woff2") format("woff2");
-    }
-    
+    @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap")
+
     html, body, [class*="css"]  {
-    	font-family: "Focussans Regular";
-     }
+		font-family: "Open Sans";
+	}
 </style>"""
 st.markdown(focus_san, unsafe_allow_html=True)
 
