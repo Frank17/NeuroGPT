@@ -44,9 +44,8 @@ if prompt := st.chat_input(placeholder):
         gpt_res = get_gpt_response(prompt)
         next(gpt_res)  # Remove the role entry
         for chunk in gpt_res:
-            if new_info := chunk['choices'][0]['delta']:
-                new_text = new_info['content']
-                full_res += new_text
+            if new_text := chunk['choices'][0]['delta']:
+                full_res += new_text['content']
                 res_box.markdown(full_res + ':rainbow:')
             else:
                 # We hit the end of the GPT response
