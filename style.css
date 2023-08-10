@@ -5,5 +5,13 @@ html, body, [class*="css"]  {
 }
 
 #neurogpt {
-  text-align: center
+  text-align: center;
+}
+
+div[data-baseweb="base-input"] {
+    float: left;
+}
+
+button[kind="secondaryFormSubmit"] {
+    float: right;
 }
