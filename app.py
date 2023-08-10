@@ -10,11 +10,11 @@ ND_PROMPT = ('The following text is typed by an neurodiverse individual. '
 
 openai.api_key = os.getenv('OPENAI_API_KEY')
 
-st.title('NeuroGPT')
-
-
 with open('style.css') as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+
+# Start defining webpage elements
+st.title('NeuroGPT')
 
 init_prompt = st.selectbox(
     'You might want to try these prompts...',
@@ -24,14 +24,12 @@ init_prompt = st.selectbox(
 )
 chat_room = st.container()
 
-ND_PROMPT
-
-
 if 'history' not in st.session_state:
     st.session_state['history'] = []
 
 for msg in st.session_state['history']:
     chat_room.chat_message(msg['role']).write(msg['content'])
+
 
 def add_to_history(content: str, role: str) -> None:
     st.session_state['history'].append(
